@@ -1,7 +1,7 @@
 ﻿CREATE TABLE [dbo].[Periods] (
-    [ID]            INT      NOT NULL,
-    [START_TIME] (7) NOT NULL,
-    [END_TIME] (7) NOT NULL,
+    [ID]         INT      NOT NULL,
+    [START_TIME] TIME (7) NOT NULL,
+    [END_TIME]   TIME (7) NOT NULL,
     CONSTRAINT [PK_PERIODS] PRIMARY KEY CLUSTERED ([ID] ASC)
 );
 
