@@ -9,7 +9,7 @@ namespace Shared.Interfaces.Repository
 {
     public interface ISchedulingRepository
     {
-        List<Scheduling> GetRezervacije();
+        List<Scheduling> GetSchedulings();
         int InsertScheduling(Scheduling s);
         int UpdateScheduling(Scheduling s);
         int DeleteScheduling(Scheduling s);

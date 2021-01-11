@@ -9,7 +9,7 @@ namespace Shared.Interfaces.Repository
 {
     public interface IClassroomRepository
     {
-        List<Classroom> GetClassroom();
+        List<Classroom> GetClassrooms();
         int InsertClassroom(Classroom c);
         int UpdateClassroom(Classroom c);
     }
