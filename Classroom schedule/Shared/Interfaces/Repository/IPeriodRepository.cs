@@ -9,7 +9,7 @@ namespace Shared.Interfaces.Repository
 {
     public interface IPeriodRepository
     {
-        List<Period> GetPeriod();
+        List<Period> GetPeriods();
         int InsertPeriod(Period p);
         int UpdatePeriod(Period p);
     }
