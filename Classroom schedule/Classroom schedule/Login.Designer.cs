@@ -91,7 +91,7 @@ namespace Classroom_schedule
             this.buttonLogin.IconVisible = true;
             this.buttonLogin.IconZoom = 90D;
             this.buttonLogin.IsTab = false;
-            this.buttonLogin.Location = new System.Drawing.Point(127, 171);
+            this.buttonLogin.Location = new System.Drawing.Point(123, 171);
             this.buttonLogin.Name = "buttonLogin";
             this.buttonLogin.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.buttonLogin.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
@@ -119,7 +119,7 @@ namespace Classroom_schedule
             // 
             this.bunifuSeparator1.BackColor = System.Drawing.Color.Transparent;
             this.bunifuSeparator1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.bunifuSeparator1.LineColor = System.Drawing.Color.Silver;
+            this.bunifuSeparator1.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.bunifuSeparator1.LineThickness = 1;
             this.bunifuSeparator1.Location = new System.Drawing.Point(19, 39);
             this.bunifuSeparator1.Name = "bunifuSeparator1";
