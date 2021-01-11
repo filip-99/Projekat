@@ -91,7 +91,7 @@ namespace Classroom_schedule
             this.buttonLogin.IconVisible = true;
             this.buttonLogin.IconZoom = 90D;
             this.buttonLogin.IsTab = false;
-            this.buttonLogin.Location = new System.Drawing.Point(123, 171);
+            this.buttonLogin.Location = new System.Drawing.Point(134, 172);
             this.buttonLogin.Name = "buttonLogin";
             this.buttonLogin.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.buttonLogin.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
