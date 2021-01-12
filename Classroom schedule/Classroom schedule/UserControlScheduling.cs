@@ -340,5 +340,19 @@ namespace Classroom_schedule
             }
         }
         //***************************************************************************************
+        private void buttonShowP_Click(object sender, EventArgs e)
+        {
+            ShowPeriods();
+        }
+
+        private void buttonInsertP_Click(object sender, EventArgs e)
+        {
+            InsertPeriod();
+        }
+
+        private void buttonUpdateP_Click(object sender, EventArgs e)
+        {
+            UpdatePeriod();
+        }
     }
 }

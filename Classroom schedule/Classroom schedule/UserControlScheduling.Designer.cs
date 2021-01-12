@@ -102,6 +102,7 @@ namespace Classroom_schedule
             this.buttonShowP.TabIndex = 4;
             this.buttonShowP.Text = "Show periods";
             this.buttonShowP.UseVisualStyleBackColor = false;
+            this.buttonShowP.Click += new System.EventHandler(this.buttonShowP_Click);
             // 
             // buttonShowC
             // 
@@ -425,6 +426,7 @@ namespace Classroom_schedule
             this.buttonUpdateP.TabIndex = 19;
             this.buttonUpdateP.Text = "Update";
             this.buttonUpdateP.UseVisualStyleBackColor = false;
+            this.buttonUpdateP.Click += new System.EventHandler(this.buttonUpdateP_Click);
             // 
             // buttonInsertP
             // 
@@ -437,6 +439,7 @@ namespace Classroom_schedule
             this.buttonInsertP.TabIndex = 18;
             this.buttonInsertP.Text = "Insert";
             this.buttonInsertP.UseVisualStyleBackColor = false;
+            this.buttonInsertP.Click += new System.EventHandler(this.buttonInsertP_Click);
             // 
             // UserControlScheduling
             // 
