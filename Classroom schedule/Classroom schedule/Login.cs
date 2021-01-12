@@ -41,20 +41,20 @@ namespace Classroom_schedule
             {
                 if (textBoxPassword.Text == "admin")
                 {
-                    MessageBox.Show("Uspesno ste se ulogovali!");
+                    MessageBox.Show("You have successfully logged in!");
                     this.Hide();
-                    Form1 fm = new Form1(schedulingBusiness, periodBusiness, classroomBusiness);
+                    Main fm = new Main(schedulingBusiness, periodBusiness, classroomBusiness);
                     fm.ShowDialog();
                     return;
                 }
 
                 else
-                    MessageBox.Show("Netacna lozinka! ");
+                    MessageBox.Show("Wrong password!");
                 textBoxPassword.Clear();
             }
             else
             {
-                MessageBox.Show("Morate uneti lozinku!");
+                MessageBox.Show("You need to enter password!");
             }
         }
 

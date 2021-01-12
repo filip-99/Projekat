@@ -25,8 +25,8 @@ namespace Classroom_schedule
             ConfigureServisec(services);
             using (ServiceProvider serviceProvider = services.BuildServiceProvider())
             {
-                var Login = serviceProvider.GetRequiredService<Login>();
-                Application.Run(Login);
+                var Home = serviceProvider.GetRequiredService<Home>();
+                Application.Run(Home);
             }
         }
 
@@ -39,9 +39,11 @@ namespace Classroom_schedule
             services.AddScoped<IPeriodBusiness, PeriodBusiness>();
             services.AddScoped<IClassroomBusiness, ClassroomBusiness>();
             services.AddScoped<Login>();
-            services.AddScoped<Form1>();
-           
-            
+            services.AddScoped<Home>();
+            services.AddScoped<Login2>();
+            services.AddScoped<NovaForma>();
+
+
 
         }
     }

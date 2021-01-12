@@ -49,7 +49,6 @@ namespace Classroom_schedule
             this.buttonLogin.Text = "Login";
             this.buttonLogin.UseVisualStyleBackColor = false;
             this.buttonLogin.Click += new System.EventHandler(this.buttonLogin_Click);
-            
             // 
             // textBoxPassword
             // 
@@ -61,7 +60,7 @@ namespace Classroom_schedule
             this.textBoxPassword.Name = "textBoxPassword";
             this.textBoxPassword.Size = new System.Drawing.Size(338, 65);
             this.textBoxPassword.TabIndex = 1;
-            this.textBoxPassword.Text = "\r\npassword";
+            this.textBoxPassword.Text = "\r\nPASSWORD";
             this.textBoxPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBoxPassword.MouseClick += new System.Windows.Forms.MouseEventHandler(this.textBoxPassword_MouseClick);
             this.textBoxPassword.Leave += new System.EventHandler(this.textBoxPassword_Leave);
