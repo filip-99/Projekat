@@ -39,7 +39,7 @@ namespace Classroom_schedule
             services.AddScoped<IPeriodBusiness, PeriodBusiness>();
             services.AddScoped<IClassroomBusiness, ClassroomBusiness>();
             services.AddScoped<Login>();
-            services.AddScoped<Form1>();
+            services.AddScoped<Home>();
            
             
 

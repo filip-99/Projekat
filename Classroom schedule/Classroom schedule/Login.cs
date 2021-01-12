@@ -43,7 +43,7 @@ namespace Classroom_schedule
                 {
                     MessageBox.Show("Uspesno ste se ulogovali!");
                     this.Hide();
-                    Form1 fm = new Form1(schedulingBusiness, periodBusiness, classroomBusiness);
+                    Home fm = new Home(schedulingBusiness, periodBusiness, classroomBusiness);
                     fm.ShowDialog();
                     return;
                 }

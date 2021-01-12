@@ -11,12 +11,12 @@ using System.Windows.Forms;
 
 namespace Classroom_schedule
 {
-    public partial class Form1 : Form
+    public partial class Home : Form
     {
         private readonly ISchedulingBusiness schedulingBusiness;
         private readonly IPeriodBusiness periodBusiness;
         private readonly IClassroomBusiness classroomBusiness;
-        public Form1(ISchedulingBusiness schedulingBusiness, IPeriodBusiness periodBusiness, IClassroomBusiness classroomBusiness)
+        public Home(ISchedulingBusiness schedulingBusiness, IPeriodBusiness periodBusiness, IClassroomBusiness classroomBusiness)
         {
             this.schedulingBusiness = schedulingBusiness;
             this.periodBusiness = periodBusiness;
