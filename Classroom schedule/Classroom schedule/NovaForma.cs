@@ -11,12 +11,12 @@ using System.Windows.Forms;
 
 namespace Classroom_schedule
 {
-    public partial class Home : Form
+    public partial class NovaForma : Form
     {
         private readonly ISchedulingBusiness schedulingBusiness;
         private readonly IPeriodBusiness periodBusiness;
         private readonly IClassroomBusiness classroomBusiness;
-        public Home(ISchedulingBusiness schedulingBusiness, IPeriodBusiness periodBusiness, IClassroomBusiness classroomBusiness)
+        public NovaForma(ISchedulingBusiness schedulingBusiness, IPeriodBusiness periodBusiness, IClassroomBusiness classroomBusiness)
         {
             this.schedulingBusiness = schedulingBusiness;
             this.periodBusiness = periodBusiness;
@@ -24,23 +24,9 @@ namespace Classroom_schedule
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void NovaForma_Load(object sender, EventArgs e)
         {
 
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            Login2 m = new Login2(schedulingBusiness, periodBusiness, classroomBusiness);
-            m.Show();
-        }
-
-        private void buttonShowScheduling_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            Login m = new Login(schedulingBusiness, periodBusiness, classroomBusiness);
-            m.Show();
         }
     }
 }
