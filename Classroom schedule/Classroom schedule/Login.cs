@@ -43,8 +43,8 @@ namespace Classroom_schedule
                 {
                     MessageBox.Show("You have successfully logged in!");
                     this.Hide();
-                    Main fm = new Main(schedulingBusiness, periodBusiness, classroomBusiness);
-                    fm.ShowDialog();
+                    Schedule s = new Schedule(schedulingBusiness, periodBusiness, classroomBusiness);
+                   s.ShowDialog();
                     return;
                 }
 

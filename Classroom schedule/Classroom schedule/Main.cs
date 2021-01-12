@@ -34,18 +34,12 @@ namespace Classroom_schedule
 
         private void buttonScheduling_Click(object sender, EventArgs e)
         {
-            
+            Main m = new Main(schedulingBusiness, periodBusiness, classroomBusiness);
+            this.Close();
+            m.Show();
         }
 
-        private void Main_Load(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void Main_Load_1(object sender, EventArgs e)
-        {
-
-        }
+        
         private void ShowSchedule()
         {
             listBoxSchedule.Items.Clear();
