@@ -150,6 +150,110 @@ namespace Classroom_schedule
 
         }
         //***********************************************************************************************
+        private void UpdateSchedule()
+        {
+            if (!string.IsNullOrEmpty(textBoxDay.Text) && !string.IsNullOrEmpty(textBoxPeriod.Text) && !string.IsNullOrEmpty(textBoxCNumber.Text) && !string.IsNullOrEmpty(textBoxOccupied.Text))
+            {
+                if (string.IsNullOrEmpty(textBoxDuty.Text) && Convert.ToBoolean(textBoxOccupied.Text) == true)
+                {
+                    MessageBox.Show("If you have entered a person on duty, the period must be filled in!");
+                    return;
+                }
+                else if (!string.IsNullOrEmpty(textBoxDuty.Text) && Convert.ToBoolean(textBoxOccupied.Text) == false)
+                {
+                    MessageBox.Show("If you have entered a period, the person on duty must be filled in!");
+                    return;
+                }
+
+                foreach (Scheduling r in schedulingBusiness.GetAllSchedulings())
+                    if (Convert.ToInt32(textBoxDay.Text) == r.Day && Convert.ToInt32(textBoxPeriod.Text) == r.Period_id && Convert.ToInt32(textBoxCNumber.Text) == r.Classroom_number && Convert.ToBoolean(textBoxOccupied.Text) == r.Occupied)
+                    {
+                        MessageBox.Show("You haven't changed anything!");
+                        return;
+                    }
+                Scheduling re = new Scheduling();
+                re.Day = Convert.ToInt32(textBoxDay.Text);
+                re.Period_id = Convert.ToInt32(textBoxPeriod.Text);
+                re.Classroom_number = Convert.ToInt32(textBoxCNumber.Text);
+                re.Occupied = Convert.ToBoolean(textBoxOccupied.Text);
+                re.Duty_person = textBoxDuty.Text;
+                if (schedulingBusiness.UpdateOneScheduling(re))
+                {
+                    MessageBox.Show("Successful change!");
+                    ShowSchedule();
+                }
+                else
+                {
+                    MessageBox.Show("Unsuccessful change!");
+                }
+            }
+            else
+            {
+                MessageBox.Show("You haven't filled in all the fields!");
+            }
+        }
+        //********************************************************************************************
+        private void UpdateClassroom()
+        {
+
+            if (!string.IsNullOrEmpty(textBoxNumber.Text) && !string.IsNullOrEmpty(textBoxCapacity.Text))
+            {
+                foreach (Classroom u in classroomBusiness.GetAllClassrooms())
+                    if (Convert.ToInt32(textBoxNumber.Text) == u.Number && Convert.ToInt32(textBoxCapacity.Text) == u.Capacity)
+                    {
+                        MessageBox.Show("You haven't changed anything!");
+                        return;
+                    }
+                Classroom uc = new Classroom();
+                uc.Number = Convert.ToInt32(textBoxNumber.Text);
+                uc.Capacity = Convert.ToInt32(textBoxCapacity.Text);
+                if (classroomBusiness.UpdateOneClassroom(uc))
+                {
+                    MessageBox.Show("Successful change!");
+                    ShowClassrooms();
+                }
+                else
+                {
+                    MessageBox.Show("Unsuccessful change!");
+                }
+            }
+            else
+            {
+                MessageBox.Show("You haven't filled in all the fields!");
+            }
+        }
+        //*************************************************************************************************
+
+        private void UpdatePeriod()
+        {
+
+            if (!string.IsNullOrEmpty(textBoxID.Text) && !string.IsNullOrEmpty(textBoxStart.Text) && !string.IsNullOrEmpty(textBoxEnd.Text))
+            {
+                foreach (Period te in periodBusiness.GetAllPeriods())
+                    if (Convert.ToInt32(textBoxID.Text) == te.Id && TimeSpan.Parse(textBoxStart.Text) == te.Start_time && TimeSpan.Parse(textBoxEnd.Text) == te.End_time)
+                    {
+                        MessageBox.Show("You haven't changed anything!");
+                        return;
+                    }
+                Period t = new Period();
+                t.Id = Convert.ToInt32(textBoxID.Text);
+                t.Start_time = TimeSpan.Parse(textBoxStart.Text);
+                t.End_time= TimeSpan.Parse(textBoxEnd.Text);
+
+                if (periodBusiness.UpdateOnePeriod(t))
+                {
+                    MessageBox.Show("Successful change!");
+                    ShowPeriods();
+                }
+                else
+                    MessageBox.Show("Unsuccessful change!");
+
+            }
+            else
+            {
+                MessageBox.Show("You haven't filled in all the fields!");
+            }
+        }
 
         private void UserControlScheduling_Load(object sender, EventArgs e)
         {
