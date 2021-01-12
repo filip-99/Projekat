@@ -142,7 +142,7 @@ namespace Classroom_schedule
             }
             else
             {
-                MessageBox.Show("You did not fill some field!");
+                MessageBox.Show("You didn't fill some field!");
             }
         }
 
@@ -168,6 +168,36 @@ namespace Classroom_schedule
             ShowWholeSchedule();
         }
 
+        private void buttonOnlyFree_Click(object sender, EventArgs e)
+        {
+            listBoxSchedule.Items.Clear();
+            ShowFreePeriods();
+        }
+
+        private void buttonShowCSchedule_Click(object sender, EventArgs e)
+        {
+            listBoxHelp.Items.Clear();
+            ScheduleForOneClassroom();
+        }
+
+        private void buttonShowFreeClassrooms_Click(object sender, EventArgs e)
+        {
+            listBoxHelp.Items.Clear();
+            FreePeriodsForOneClassroom();
+        }
+
+        private void buttonFromTo_Click(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(textBoxCSchedule.Text))
+            {
+                listBoxHelp.Items.Clear();
+                PeriodsInRange();
+            }
+            else
+            {
+                MessageBox.Show("You didn't fill some field!");
+            }
+        }
     }
 
     

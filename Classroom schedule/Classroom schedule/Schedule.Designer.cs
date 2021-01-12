@@ -129,6 +129,7 @@
             this.buttonFromTo.TabIndex = 27;
             this.buttonFromTo.Text = "Show periods in range";
             this.buttonFromTo.UseVisualStyleBackColor = false;
+            this.buttonFromTo.Click += new System.EventHandler(this.buttonFromTo_Click);
             // 
             // buttonOnlyFree
             // 
@@ -141,6 +142,7 @@
             this.buttonOnlyFree.TabIndex = 26;
             this.buttonOnlyFree.Text = "Show only free periods";
             this.buttonOnlyFree.UseVisualStyleBackColor = false;
+            this.buttonOnlyFree.Click += new System.EventHandler(this.buttonOnlyFree_Click);
             // 
             // buttonShowFreeClassrooms
             // 
@@ -153,6 +155,7 @@
             this.buttonShowFreeClassrooms.TabIndex = 25;
             this.buttonShowFreeClassrooms.Text = "Show free classroom periods";
             this.buttonShowFreeClassrooms.UseVisualStyleBackColor = false;
+            this.buttonShowFreeClassrooms.Click += new System.EventHandler(this.buttonShowFreeClassrooms_Click);
             // 
             // buttonShowCSchedule
             // 
@@ -165,6 +168,7 @@
             this.buttonShowCSchedule.TabIndex = 24;
             this.buttonShowCSchedule.Text = "Show classroom schedule";
             this.buttonShowCSchedule.UseVisualStyleBackColor = false;
+            this.buttonShowCSchedule.Click += new System.EventHandler(this.buttonShowCSchedule_Click);
             // 
             // buttonShowS
             // 
