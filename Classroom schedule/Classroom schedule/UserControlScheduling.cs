@@ -23,6 +23,7 @@ namespace Classroom_schedule
         {
             InitializeComponent();
         }
+        //*******************************************************************************************************************************************
         private void ShowSchedule()
         {
             listBoxSchedule.Items.Clear();
@@ -35,6 +36,7 @@ namespace Classroom_schedule
             }
 
         }
+        //*********************************************************************************************************************************************
         private void ShowPeriods()
         {
             listBoxPeriods.Items.Clear();
@@ -45,6 +47,7 @@ namespace Classroom_schedule
                 listBoxPeriods.Items.Add(t.Id + ". \t" + t.Start_time + ". \t" + t.End_time);
             }
         }
+        //*******************************************************************************************************************************************
         private void ShowClassrooms()
         {
             listBoxClassrooms.Items.Clear();
@@ -56,6 +59,47 @@ namespace Classroom_schedule
                 listBoxClassrooms.Items.Add(u.Number + ". \t" + u.Capacity);
             }
 
+        }
+        //*********************************************************************************************************************************************
+        private void InsertSchedule()
+        {
+            List<Scheduling> listScheduling = new List<Scheduling>();
+            if (!string.IsNullOrEmpty(textBoxDay.Text) && !string.IsNullOrEmpty(textBoxPeriod.Text) && !string.IsNullOrEmpty(textBoxCNumber.Text) && !string.IsNullOrEmpty(textBoxOccupied.Text))
+            {
+                Scheduling r = new Scheduling();
+                r.Day = Convert.ToInt32(textBoxDay.Text);
+                r.Period_id = Convert.ToInt32(textBoxPeriod.Text);
+                r.Classroom_number = Convert.ToInt32(textBoxCNumber.Text);
+                r.Occupied = Convert.ToBoolean(textBoxOccupied.Text);
+                r.Duty_person = textBoxDuty.Text;
+                if (string.IsNullOrEmpty(textBoxDuty.Text) && Convert.ToBoolean(textBoxOccupied.Text) == true)
+                {
+                    MessageBox.Show("If you have entered a person on duty, the period must be filled in!");
+                    return;
+                }
+                else if (!string.IsNullOrEmpty(textBoxDuty.Text) && Convert.ToBoolean(textBoxOccupied.Text) == false)
+                {
+                    MessageBox.Show("If you have entered a period, the person on duty must be filled in!");
+                    return;
+                }
+                foreach (Scheduling rz in schedulingBusiness.GetAllSchedulings())
+                    if (Convert.ToInt32(textBoxDay.Text) == rz.Day && Convert.ToInt32(textBoxPeriod.Text) == rz.Period_id && Convert.ToInt32(textBoxCNumber.Text) == rz.Classroom_number && Convert.ToBoolean(textBoxOccupied.Text) == rz.Occupied && textBoxDuty.Text == rz.Duty_person)
+                    {
+                        MessageBox.Show("This period already exists");
+                        return;
+                    }
+                if (this.schedulingBusiness.InsertOneScheduling(r))
+                {
+                    ShowSchedule();
+                    MessageBox.Show("Successful entry!");
+                }
+                else
+                    MessageBox.Show("Scheduling is not entered in the database");
+            }
+            else
+            {
+                MessageBox.Show("You haven't filled in all the fields!");
+            }
         }
 
         private void UserControlScheduling_Load(object sender, EventArgs e)
