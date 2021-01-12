@@ -7,4 +7,4 @@
 INSERT INTO [dbo].[Classrooms] ([NUMBER], [CAPACITY]) VALUES (21, 110)
 INSERT INTO [dbo].[Classrooms] ([NUMBER], [CAPACITY]) VALUES (212, 25)
 INSERT INTO [dbo].[Classrooms] ([NUMBER], [CAPACITY]) VALUES (214, 30)
-INSERT INTO [dbo].[Classrooms] ([NUMBER], [CAPACITY]) VALUES (2017, 33)
+INSERT INTO [dbo].[Classrooms] ([NUMBER], [CAPACITY]) VALUES (217, 33)
