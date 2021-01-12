@@ -31,7 +31,9 @@ namespace Classroom_schedule
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Hide();
+            Main m = new Main(schedulingBusiness, periodBusiness, classroomBusiness);
+            m.Show();
         }
     }
 }
