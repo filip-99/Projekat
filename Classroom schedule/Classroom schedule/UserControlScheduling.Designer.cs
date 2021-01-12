@@ -81,6 +81,7 @@ namespace Classroom_schedule
             this.buttonShowS.TabIndex = 1;
             this.buttonShowS.Text = "Show schedule";
             this.buttonShowS.UseVisualStyleBackColor = false;
+            this.buttonShowS.Click += new System.EventHandler(this.buttonShowS_Click);
             // 
             // listBoxSchedule
             // 
@@ -220,6 +221,7 @@ namespace Classroom_schedule
             this.buttonDeleteS.TabIndex = 19;
             this.buttonDeleteS.Text = "Delete";
             this.buttonDeleteS.UseVisualStyleBackColor = false;
+            this.buttonDeleteS.Click += new System.EventHandler(this.buttonDeleteS_Click);
             // 
             // buttonInsertS
             // 
@@ -232,6 +234,7 @@ namespace Classroom_schedule
             this.buttonInsertS.TabIndex = 17;
             this.buttonInsertS.Text = "Insert";
             this.buttonInsertS.UseVisualStyleBackColor = false;
+            this.buttonInsertS.Click += new System.EventHandler(this.buttonInsertS_Click);
             // 
             // buttonUpdateS
             // 
@@ -244,6 +247,7 @@ namespace Classroom_schedule
             this.buttonUpdateS.TabIndex = 18;
             this.buttonUpdateS.Text = "Update";
             this.buttonUpdateS.UseVisualStyleBackColor = false;
+            this.buttonUpdateS.Click += new System.EventHandler(this.buttonUpdateS_Click);
             // 
             // CLASSROOMS
             // 

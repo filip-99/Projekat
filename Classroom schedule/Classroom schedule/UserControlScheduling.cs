@@ -254,10 +254,67 @@ namespace Classroom_schedule
                 MessageBox.Show("You haven't filled in all the fields!");
             }
         }
-
+        //************************************************************************************
+        private void Validation()
+        {
+            if (!string.IsNullOrEmpty(textBoxDay.Text) && !string.IsNullOrEmpty(textBoxPeriod.Text) && !string.IsNullOrEmpty(textBoxCNumber.Text))
+            {
+                buttonInsertS.Enabled = true;
+                buttonUpdateS.Enabled = true;
+            }
+            else
+            {
+                buttonInsertS.Enabled = false;
+                buttonUpdateS.Enabled = false;
+            }
+        }
+        //****************************************************************************************
         private void UserControlScheduling_Load(object sender, EventArgs e)
         {
 
         }
+
+        private void buttonShowS_Click(object sender, EventArgs e)
+        {
+            ShowSchedule();
+        }
+
+        private void buttonInsertS_Click(object sender, EventArgs e)
+        {
+            InsertSchedule();
+        }
+
+        private void buttonUpdateS_Click(object sender, EventArgs e)
+        {
+            UpdateSchedule();
+        }
+
+        private void buttonDeleteS_Click(object sender, EventArgs e)
+        {
+            
+                if (!string.IsNullOrEmpty(textBoxDay.Text) && !string.IsNullOrEmpty(textBoxPeriod.Text) && !string.IsNullOrEmpty(textBoxCNumber.Text) && !string.IsNullOrEmpty(textBoxOccupied.Text))
+                {
+                    Scheduling r = new Scheduling();
+                    r.Day = Convert.ToInt32(textBoxDay.Text);
+                    r.Period_id = Convert.ToInt32(textBoxPeriod.Text);
+                    r.Classroom_number = Convert.ToInt32(textBoxCNumber.Text);
+                    r.Occupied = Convert.ToBoolean(textBoxOccupied.Text);
+                    r.Duty_person = textBoxDuty.Text;
+                    if (this.schedulingBusiness.DeleteOneScheduling(r))
+                    {
+                        ShowSchedule();
+                        MessageBox.Show("Obrisali ste rezervaciju");
+                    }
+                    else
+                        MessageBox.Show("Naredba nije izvrsena");
+                }
+
+                else
+                {
+                    MessageBox.Show("Niste popunili sva polja!");
+                }
+            
+        }
+        //**********************************************************************************
     }
 }
