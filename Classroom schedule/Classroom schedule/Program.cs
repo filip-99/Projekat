@@ -41,7 +41,7 @@ namespace Classroom_schedule
             services.AddScoped<Login>();
             services.AddScoped<Home>();
             services.AddScoped<Login2>();
-            services.AddScoped<NovaForma>();
+            services.AddScoped<Schedule>();
 
 
 

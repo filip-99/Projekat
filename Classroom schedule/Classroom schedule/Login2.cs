@@ -80,8 +80,8 @@ namespace Classroom_schedule
                 {
                     MessageBox.Show("You have successfully logged in!");
                     this.Hide();
-                    NovaForma fm = new NovaForma(schedulingBusiness, periodBusiness, classroomBusiness);
-                    fm.ShowDialog();
+                    Main m = new Main(schedulingBusiness, periodBusiness, classroomBusiness);
+                    m.ShowDialog();
                     return;
                 }
 

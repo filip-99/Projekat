@@ -34,18 +34,13 @@ namespace Classroom_schedule
 
         private void buttonScheduling_Click(object sender, EventArgs e)
         {
+            Main m = new Main(schedulingBusiness, periodBusiness, classroomBusiness);
             
+            m.Show();
+            m.BringToFront();
         }
 
-        private void Main_Load(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void Main_Load_1(object sender, EventArgs e)
-        {
-
-        }
+        
         private void ShowSchedule()
         {
             listBoxSchedule.Items.Clear();
@@ -386,6 +381,19 @@ namespace Classroom_schedule
             textBoxEnd.Text = period.Split('.')[2].Trim();
 
             buttonUpdateP.Enabled = true;
+        }
+
+        private void buttonShowSchedule_Click(object sender, EventArgs e)
+        {
+            Schedule s = new Schedule(schedulingBusiness, periodBusiness, classroomBusiness);
+            
+            s.Show();
+            s.BringToFront();
+        }
+
+        private void Main_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

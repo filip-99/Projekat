@@ -95,6 +95,7 @@
             this.buttonShowSchedule.TabIndex = 1;
             this.buttonShowSchedule.Text = "Show schedule";
             this.buttonShowSchedule.UseVisualStyleBackColor = false;
+            this.buttonShowSchedule.Click += new System.EventHandler(this.buttonShowSchedule_Click);
             // 
             // buttonScheduling
             // 
@@ -502,7 +503,7 @@
             this.Name = "Main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Classroom scheduling";
-            this.Load += new System.EventHandler(this.Main_Load_1);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Main_FormClosing);
             this.panel1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
