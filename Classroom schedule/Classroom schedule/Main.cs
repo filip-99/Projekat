@@ -381,5 +381,12 @@ namespace Classroom_schedule
 
             buttonUpdateP.Enabled = true;
         }
+
+        private void buttonShowSchedule_Click(object sender, EventArgs e)
+        {
+            Schedule s = new Schedule(schedulingBusiness, periodBusiness, classroomBusiness);
+            this.Close();
+            s.Show();
+        }
     }
 }

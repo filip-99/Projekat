@@ -190,6 +190,7 @@
             this.listBoxSchedule.Name = "listBoxSchedule";
             this.listBoxSchedule.Size = new System.Drawing.Size(488, 394);
             this.listBoxSchedule.TabIndex = 22;
+            this.listBoxSchedule.SelectedIndexChanged += new System.EventHandler(this.listBoxSchedule_SelectedIndexChanged);
             // 
             // Schedule
             // 

@@ -198,6 +198,15 @@ namespace Classroom_schedule
                 MessageBox.Show("You didn't fill some field!");
             }
         }
+
+        private void listBoxSchedule_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string schedule = listBoxSchedule.SelectedItem.ToString();
+           textBoxCSchedule.Text = schedule.Split('\t')[1].Trim();
+            textBoxFreePeriods.Text = schedule.Split('\t')[1].Trim();
+            textBoxFrom.Text = schedule.Split('\t')[7].Trim();
+            textBoxTo.Text = schedule.Split('\t')[8].Trim();
+        }
     }
 
     
