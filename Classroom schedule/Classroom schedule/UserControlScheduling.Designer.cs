@@ -334,7 +334,7 @@ namespace Classroom_schedule
             this.groupBox2.Controls.Add(this.buttonInsertP);
             this.groupBox2.Location = new System.Drawing.Point(301, 330);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(249, 212);
+            this.groupBox2.Size = new System.Drawing.Size(261, 212);
             this.groupBox2.TabIndex = 17;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "PERIODS";
@@ -426,6 +426,7 @@ namespace Classroom_schedule
             this.Controls.Add(this.buttonShowS);
             this.Name = "UserControlScheduling";
             this.Size = new System.Drawing.Size(1143, 590);
+            this.Load += new System.EventHandler(this.UserControlScheduling_Load);
             this.SCHEDULING.ResumeLayout(false);
             this.SCHEDULING.PerformLayout();
             this.CLASSROOMS.ResumeLayout(false);
