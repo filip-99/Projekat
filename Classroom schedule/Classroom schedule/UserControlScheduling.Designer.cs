@@ -90,6 +90,7 @@ namespace Classroom_schedule
             this.listBoxSchedule.Name = "listBoxSchedule";
             this.listBoxSchedule.Size = new System.Drawing.Size(280, 212);
             this.listBoxSchedule.TabIndex = 2;
+            this.listBoxSchedule.SelectedIndexChanged += new System.EventHandler(this.listBoxSchedule_SelectedIndexChanged);
             // 
             // buttonShowP
             // 
@@ -124,6 +125,7 @@ namespace Classroom_schedule
             this.listBoxClassrooms.Name = "listBoxClassrooms";
             this.listBoxClassrooms.Size = new System.Drawing.Size(280, 212);
             this.listBoxClassrooms.TabIndex = 6;
+            this.listBoxClassrooms.SelectedIndexChanged += new System.EventHandler(this.listBoxClassrooms_SelectedIndexChanged);
             // 
             // SCHEDULING
             // 
@@ -348,6 +350,7 @@ namespace Classroom_schedule
             this.listBoxPeriods.Name = "listBoxPeriods";
             this.listBoxPeriods.Size = new System.Drawing.Size(280, 212);
             this.listBoxPeriods.TabIndex = 16;
+            this.listBoxPeriods.SelectedIndexChanged += new System.EventHandler(this.listBoxPeriods_SelectedIndexChanged);
             // 
             // groupBox2
             // 

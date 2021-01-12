@@ -255,21 +255,7 @@ namespace Classroom_schedule
             }
         }
         //************************************************************************************
-        private void Validation()
-        {
-            if (!string.IsNullOrEmpty(textBoxDay.Text) && !string.IsNullOrEmpty(textBoxPeriod.Text) && !string.IsNullOrEmpty(textBoxCNumber.Text))
-            {
-                buttonInsertS.Enabled = true;
-                buttonUpdateS.Enabled = true;
-            }
-            else
-            {
-                buttonInsertS.Enabled = false;
-                buttonUpdateS.Enabled = false;
-            }
-        }
-        //****************************************************************************************
-        
+       
         private void buttonShowS_Click(object sender, EventArgs e)
         {
             ShowSchedule();
@@ -353,6 +339,37 @@ namespace Classroom_schedule
         private void buttonUpdateP_Click(object sender, EventArgs e)
         {
             UpdatePeriod();
+        }
+        //********************************************************************************************
+        private void listBoxSchedule_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string schedule = listBoxSchedule.SelectedItem.ToString();
+            textBoxDay.Text = schedule.Split('.')[0].Trim();
+            textBoxPeriod.Text = schedule.Split('.')[1].Trim();
+            textBoxCNumber.Text = schedule.Split('.')[2].Trim();
+            textBoxOccupied.Text = schedule.Split('.')[3].Trim();
+            textBoxDuty.Text = schedule.Split('.')[4].Trim();
+
+            buttonUpdateS.Enabled = true;
+        }
+
+        private void listBoxClassrooms_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string classrooms = listBoxClassrooms.SelectedItem.ToString();
+            textBoxNumber.Text = classrooms.Split('.')[0].Trim();
+            textBoxCapacity.Text = classrooms.Split('.')[1].Trim();
+
+            buttonUpdateC.Enabled = true;
+        }
+
+        private void listBoxPeriods_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string period = listBoxPeriods.SelectedItem.ToString();
+            textBoxID.Text = period.Split('.')[0].Trim();
+            textBoxStart.Text = period.Split('.')[1].Trim();
+            textBoxEnd.Text = period.Split('.')[2].Trim();
+
+            buttonUpdateP.Enabled = true;
         }
     }
 }
