@@ -117,7 +117,34 @@ namespace Classroom_schedule
                 return;
             }
         }
+        //*************************************************************************************************
+        //Periods in range
+        private void PeriodsInRange()
+        {
+            if (!string.IsNullOrEmpty(textBoxFrom.Text) && !string.IsNullOrEmpty(textBoxTo.Text))
+            {
 
+                listBoxHelp.Items.Clear();
+                var innerJoin =
+               from scheduling in schedulingBusiness.GetAllSchedulings()
+               join classroom in classroomBusiness.GetAllClassrooms()
+               on scheduling.Classroom_number equals classroom.Number
+               join period in periodBusiness.GetAllPeriods()
+               on scheduling.Period_id equals period.Id
+               select new { ClassroomCapacity = classroom.Capacity, ClassroomNumber = classroom.Number, SchedulingDay = scheduling.Day, SchedulingPeriod = scheduling.Period_id, SchedulingNumber = classroom.Number, SchedulingOccupied = scheduling.Occupied, SchedulingDuty = scheduling.Duty_person, PeriodStart = period.Start_time, PeriodEnd = period.End_time };
+                //All periods[Scheduling + Classrooms]
+                listBoxHelp.Items.Add("Day\tClassroom number\tPeriod\tOccupied\tCapacity \tStart time \tEnd time\t\tPerson on duty");
+                foreach (var i in innerJoin)
+                {
+                    if (i.PeriodStart >= TimeSpan.Parse(textBoxFrom.Text) && i.PeriodEnd <= TimeSpan.Parse(textBoxTo.Text))
+                        listBoxHelp.Items.Add(i.SchedulingDay + "\t" + i.ClassroomNumber + "\t\t" + i.SchedulingPeriod + " \t" + i.SchedulingOccupied + "  \t" + i.ClassroomCapacity + "\t\t" + i.PeriodStart + " \t " + i.PeriodEnd + " \t" + i.SchedulingDuty);
+                }
+            }
+            else
+            {
+                MessageBox.Show("You did not fill some field!");
+            }
+        }
 
 
         private void buttonScheduling_Click(object sender, EventArgs e)
@@ -137,8 +164,10 @@ namespace Classroom_schedule
 
         private void buttonShowS_Click(object sender, EventArgs e)
         {
-
+            listBoxSchedule.Items.Clear();
+            ShowWholeSchedule();
         }
+
     }
 
     
