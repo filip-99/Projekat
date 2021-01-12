@@ -56,6 +56,7 @@ namespace Classroom_schedule
             this.buttonShowScheduling.TabIndex = 1;
             this.buttonShowScheduling.Text = "Show Scheduling";
             this.buttonShowScheduling.UseVisualStyleBackColor = false;
+            this.buttonShowScheduling.Click += new System.EventHandler(this.buttonShowScheduling_Click);
             // 
             // Home
             // 

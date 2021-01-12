@@ -25,8 +25,8 @@ namespace Classroom_schedule
             ConfigureServisec(services);
             using (ServiceProvider serviceProvider = services.BuildServiceProvider())
             {
-                var Login = serviceProvider.GetRequiredService<Login>();
-                Application.Run(Login);
+                var Home = serviceProvider.GetRequiredService<Home>();
+                Application.Run(Home);
             }
         }
 

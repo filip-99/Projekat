@@ -32,7 +32,14 @@ namespace Classroom_schedule
         private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Main m = new Main(schedulingBusiness, periodBusiness, classroomBusiness);
+            Login m = new Login(schedulingBusiness, periodBusiness, classroomBusiness);
+            m.Show();
+        }
+
+        private void buttonShowScheduling_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Login m = new Login(schedulingBusiness, periodBusiness, classroomBusiness);
             m.Show();
         }
     }
