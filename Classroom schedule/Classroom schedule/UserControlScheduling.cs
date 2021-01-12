@@ -269,11 +269,7 @@ namespace Classroom_schedule
             }
         }
         //****************************************************************************************
-        private void UserControlScheduling_Load(object sender, EventArgs e)
-        {
-
-        }
-
+        
         private void buttonShowS_Click(object sender, EventArgs e)
         {
             ShowSchedule();
@@ -303,18 +299,46 @@ namespace Classroom_schedule
                     if (this.schedulingBusiness.DeleteOneScheduling(r))
                     {
                         ShowSchedule();
-                        MessageBox.Show("Obrisali ste rezervaciju");
+                        MessageBox.Show("You have deleted one part of the schedule!");
                     }
                     else
-                        MessageBox.Show("Naredba nije izvrsena");
+                        MessageBox.Show("Unsuccessful delete!");
                 }
 
                 else
                 {
-                    MessageBox.Show("Niste popunili sva polja!");
+                    MessageBox.Show("You haven't filled in all the fields!");
                 }
             
         }
         //**********************************************************************************
+        private void buttonShowC_Click(object sender, EventArgs e)
+        {
+            ShowClassrooms();
+        }
+
+        private void buttonUpdateC_Click(object sender, EventArgs e)
+        {
+            UpdateClassroom();
+        }
+
+        private void buttonInsertC_Click(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(textBoxNumber.Text) && !string.IsNullOrEmpty(textBoxCapacity.Text))
+            {
+                foreach (Classroom u in classroomBusiness.GetAllClassrooms())
+                    if (Convert.ToInt32(textBoxNumber.Text) == u.Number && Convert.ToInt32(textBoxCapacity.Text) == u.Capacity)
+                    {
+                        MessageBox.Show("This period already exists!");
+                        return;
+                    }
+                InsertClassroom();
+            }
+            else
+            {
+                MessageBox.Show("You haven't filled in all the fields!");
+            }
+        }
+        //***************************************************************************************
     }
 }

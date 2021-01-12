@@ -35,6 +35,8 @@ namespace Classroom_schedule
             this.buttonShowC = new System.Windows.Forms.Button();
             this.listBoxClassrooms = new System.Windows.Forms.ListBox();
             this.SCHEDULING = new System.Windows.Forms.GroupBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.textBoxDuty = new System.Windows.Forms.TextBox();
             this.textBoxOccupied = new System.Windows.Forms.TextBox();
             this.textBoxCNumber = new System.Windows.Forms.TextBox();
             this.textBoxPeriod = new System.Windows.Forms.TextBox();
@@ -63,8 +65,6 @@ namespace Classroom_schedule
             this.textBoxID = new System.Windows.Forms.TextBox();
             this.buttonUpdateP = new System.Windows.Forms.Button();
             this.buttonInsertP = new System.Windows.Forms.Button();
-            this.textBoxDuty = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
             this.SCHEDULING.SuspendLayout();
             this.CLASSROOMS.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -114,6 +114,7 @@ namespace Classroom_schedule
             this.buttonShowC.TabIndex = 5;
             this.buttonShowC.Text = "Show classrooms";
             this.buttonShowC.UseVisualStyleBackColor = false;
+            this.buttonShowC.Click += new System.EventHandler(this.buttonShowC_Click);
             // 
             // listBoxClassrooms
             // 
@@ -145,6 +146,22 @@ namespace Classroom_schedule
             this.SCHEDULING.TabIndex = 13;
             this.SCHEDULING.TabStop = false;
             this.SCHEDULING.Text = "SCHEDULING";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(12, 129);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(53, 13);
+            this.label10.TabIndex = 29;
+            this.label10.Text = "Occupied";
+            // 
+            // textBoxDuty
+            // 
+            this.textBoxDuty.Location = new System.Drawing.Point(125, 152);
+            this.textBoxDuty.Name = "textBoxDuty";
+            this.textBoxDuty.Size = new System.Drawing.Size(100, 20);
+            this.textBoxDuty.TabIndex = 28;
             // 
             // textBoxOccupied
             // 
@@ -308,6 +325,7 @@ namespace Classroom_schedule
             this.buttonUpdateC.TabIndex = 19;
             this.buttonUpdateC.Text = "Update";
             this.buttonUpdateC.UseVisualStyleBackColor = false;
+            this.buttonUpdateC.Click += new System.EventHandler(this.buttonUpdateC_Click);
             // 
             // buttonInsertC
             // 
@@ -320,6 +338,7 @@ namespace Classroom_schedule
             this.buttonInsertC.TabIndex = 18;
             this.buttonInsertC.Text = "Insert";
             this.buttonInsertC.UseVisualStyleBackColor = false;
+            this.buttonInsertC.Click += new System.EventHandler(this.buttonInsertC_Click);
             // 
             // listBoxPeriods
             // 
@@ -419,22 +438,6 @@ namespace Classroom_schedule
             this.buttonInsertP.Text = "Insert";
             this.buttonInsertP.UseVisualStyleBackColor = false;
             // 
-            // textBoxDuty
-            // 
-            this.textBoxDuty.Location = new System.Drawing.Point(125, 152);
-            this.textBoxDuty.Name = "textBoxDuty";
-            this.textBoxDuty.Size = new System.Drawing.Size(100, 20);
-            this.textBoxDuty.TabIndex = 28;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(12, 129);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(53, 13);
-            this.label10.TabIndex = 29;
-            this.label10.Text = "Occupied";
-            // 
             // UserControlScheduling
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -450,7 +453,6 @@ namespace Classroom_schedule
             this.Controls.Add(this.buttonShowS);
             this.Name = "UserControlScheduling";
             this.Size = new System.Drawing.Size(1143, 590);
-            this.Load += new System.EventHandler(this.UserControlScheduling_Load);
             this.SCHEDULING.ResumeLayout(false);
             this.SCHEDULING.PerformLayout();
             this.CLASSROOMS.ResumeLayout(false);
