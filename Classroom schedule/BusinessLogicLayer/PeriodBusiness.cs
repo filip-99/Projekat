@@ -1,4 +1,5 @@
-﻿using Shared.Interfaces.Repository;
+﻿using Shared.Interfaces.Business;
+using Shared.Interfaces.Repository;
 using Shared.Models;
 using System;
 using System.Collections.Generic;
@@ -8,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace BusinessLogicLayer
 {
-    public class PeriodBusiness
+    public class PeriodBusiness : IPeriodBusiness
     {
         private readonly IPeriodRepository periodRepository;
 

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Shared.Interfaces.Business;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,25 @@ namespace Classroom_schedule
 {
     public partial class Form1 : Form
     {
-        public Form1()
+        private readonly ISchedulingBusiness schedulingBusiness;
+        private readonly IPeriodBusiness periodBusiness;
+        private readonly IClassroomBusiness classroomBusiness;
+        public Form1(ISchedulingBusiness schedulingBusiness, IPeriodBusiness periodBusiness, IClassroomBusiness classroomBusiness)
         {
+            this.schedulingBusiness = schedulingBusiness;
+            this.periodBusiness = periodBusiness;
+            this.classroomBusiness = classroomBusiness;
             InitializeComponent();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

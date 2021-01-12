@@ -1,4 +1,9 @@
-﻿using System;
+﻿using BusinessLogicLayer;
+using DataAccessLayer;
+using Microsoft.Extensions.DependencyInjection;
+using Shared.Interfaces.Business;
+using Shared.Interfaces.Repository;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,7 +21,25 @@ namespace Classroom_schedule
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Login());
+            var services = new ServiceCollection();
+            ConfigureServisec(services);
+            using (ServiceProvider serviceProvider = services.BuildServiceProvider())
+            {
+                var Login = serviceProvider.GetRequiredService<Login>();
+                Application.Run(Login);
+            }
+        }
+
+        private static void ConfigureServisec(ServiceCollection services)
+        {
+            services.AddScoped<ISchedulingRepository, SchedulingRepository>();
+            services.AddScoped<IPeriodRepository, PeriodRepository>();
+            services.AddScoped<IClassroomRepository,    ClassroomRepository>();
+            services.AddScoped<ISchedulingBusiness, SchedulingBusiness>();
+            services.AddScoped<IPeriodBusiness, PeriodBusiness>();
+            services.AddScoped<IClassroomBusiness, ClassroomBusiness>();
+            services.AddScoped<Login>();
+            services.AddScoped<Form1>();
         }
     }
 }
