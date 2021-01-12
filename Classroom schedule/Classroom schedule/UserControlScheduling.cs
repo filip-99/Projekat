@@ -94,13 +94,62 @@ namespace Classroom_schedule
                     MessageBox.Show("Successful entry!");
                 }
                 else
-                    MessageBox.Show("Scheduling is not entered in the database");
+                    MessageBox.Show("Scheduling is not entered in the database!");
             }
             else
             {
                 MessageBox.Show("You haven't filled in all the fields!");
             }
         }
+        //*********************************************************************************************
+        private void InsertClassroom()
+        {
+            List<Classroom> listClassroom = new List<Classroom>();
+            Classroom u = new Classroom();
+            u.Number = Convert.ToInt32(textBoxNumber.Text);
+            u.Capacity = Convert.ToInt32(textBoxCapacity.Text);
+
+            if (this.classroomBusiness.InsertOneClassroom(u))
+            {
+                ShowClassrooms();
+                MessageBox.Show("Successful entry!");
+            }
+            else
+                MessageBox.Show("Classroom is not entered in the database!");
+        }
+        //******************************************************************************************
+        private void InsertPeriod()
+        {
+
+            List<Period> listTPeriod = new List<Period>();
+            Period t = new Period();
+            t.Id = Convert.ToInt32(textBoxID.Text);
+            t.Start_time = TimeSpan.Parse(textBoxStart.Text);
+            t.End_time = TimeSpan.Parse(textBoxEnd.Text);
+
+            if (!string.IsNullOrEmpty(textBoxID.Text) && !string.IsNullOrEmpty(textBoxStart.Text) && !string.IsNullOrEmpty(textBoxEnd.Text))
+            {
+                foreach (Period te in periodBusiness.GetAllPeriods())
+                    if (Convert.ToInt32(textBoxID.Text) == te.Id && TimeSpan.Parse(textBoxStart.Text) == te.Start_time && TimeSpan.Parse(textBoxEnd.Text) == te.End_time)
+                    {
+                        MessageBox.Show("This period already exists");
+                        return;
+                    }
+                if (this.periodBusiness.InsertOnePeriod(t))
+                {
+                    ShowPeriods();
+                    MessageBox.Show("Successful entry!");
+                }
+                else
+                    MessageBox.Show("Period is not entered in the database!");
+            }
+            else
+            {
+                MessageBox.Show("You haven't filled in all the fields!");
+            }
+
+        }
+        //***********************************************************************************************
 
         private void UserControlScheduling_Load(object sender, EventArgs e)
         {
