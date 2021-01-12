@@ -214,6 +214,8 @@
             this.Name = "Schedule";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Schedule";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Schedule_FormClosing);
+            
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -150,16 +150,18 @@ namespace Classroom_schedule
         private void buttonScheduling_Click(object sender, EventArgs e)
         {
             Main m = new Main(schedulingBusiness, periodBusiness, classroomBusiness);
-            this.Close();
+            
             m.Show();
+            m.BringToFront();
 
         }
 
         private void buttonShowSchedule_Click(object sender, EventArgs e)
         {
             Schedule s = new Schedule(schedulingBusiness, periodBusiness, classroomBusiness);
-            this.Close();
+            
             s.Show();
+            s.BringToFront();
         }
 
         private void buttonShowS_Click(object sender, EventArgs e)
@@ -207,6 +209,13 @@ namespace Classroom_schedule
             textBoxFrom.Text = schedule.Split('\t')[7].Trim();
             textBoxTo.Text = schedule.Split('\t')[8].Trim();
         }
+
+        private void Schedule_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
+
+        
     }
 
     
