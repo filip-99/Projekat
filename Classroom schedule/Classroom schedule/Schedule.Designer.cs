@@ -84,28 +84,28 @@
             // 
             // textBoxFrom
             // 
-            this.textBoxFrom.Location = new System.Drawing.Point(966, 113);
+            this.textBoxFrom.Location = new System.Drawing.Point(954, 113);
             this.textBoxFrom.Name = "textBoxFrom";
             this.textBoxFrom.Size = new System.Drawing.Size(61, 20);
             this.textBoxFrom.TabIndex = 32;
             // 
             // textBoxTo
             // 
-            this.textBoxTo.Location = new System.Drawing.Point(1045, 113);
+            this.textBoxTo.Location = new System.Drawing.Point(1033, 113);
             this.textBoxTo.Name = "textBoxTo";
             this.textBoxTo.Size = new System.Drawing.Size(61, 20);
             this.textBoxTo.TabIndex = 31;
             // 
             // textBoxFreePeriods
             // 
-            this.textBoxFreePeriods.Location = new System.Drawing.Point(788, 113);
+            this.textBoxFreePeriods.Location = new System.Drawing.Point(765, 113);
             this.textBoxFreePeriods.Name = "textBoxFreePeriods";
             this.textBoxFreePeriods.Size = new System.Drawing.Size(140, 20);
             this.textBoxFreePeriods.TabIndex = 30;
             // 
             // textBoxCSchedule
             // 
-            this.textBoxCSchedule.Location = new System.Drawing.Point(607, 113);
+            this.textBoxCSchedule.Location = new System.Drawing.Point(589, 113);
             this.textBoxCSchedule.Name = "textBoxCSchedule";
             this.textBoxCSchedule.Size = new System.Drawing.Size(140, 20);
             this.textBoxCSchedule.TabIndex = 29;
@@ -113,9 +113,9 @@
             // listBoxHelp
             // 
             this.listBoxHelp.FormattingEnabled = true;
-            this.listBoxHelp.Location = new System.Drawing.Point(607, 157);
+            this.listBoxHelp.Location = new System.Drawing.Point(572, 157);
             this.listBoxHelp.Name = "listBoxHelp";
-            this.listBoxHelp.Size = new System.Drawing.Size(499, 381);
+            this.listBoxHelp.Size = new System.Drawing.Size(551, 381);
             this.listBoxHelp.TabIndex = 28;
             // 
             // buttonFromTo
@@ -123,7 +123,7 @@
             this.buttonFromTo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.buttonFromTo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonFromTo.ForeColor = System.Drawing.Color.White;
-            this.buttonFromTo.Location = new System.Drawing.Point(966, 70);
+            this.buttonFromTo.Location = new System.Drawing.Point(954, 70);
             this.buttonFromTo.Name = "buttonFromTo";
             this.buttonFromTo.Size = new System.Drawing.Size(140, 37);
             this.buttonFromTo.TabIndex = 27;
@@ -149,7 +149,7 @@
             this.buttonShowFreeClassrooms.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.buttonShowFreeClassrooms.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonShowFreeClassrooms.ForeColor = System.Drawing.Color.White;
-            this.buttonShowFreeClassrooms.Location = new System.Drawing.Point(788, 70);
+            this.buttonShowFreeClassrooms.Location = new System.Drawing.Point(765, 70);
             this.buttonShowFreeClassrooms.Name = "buttonShowFreeClassrooms";
             this.buttonShowFreeClassrooms.Size = new System.Drawing.Size(140, 37);
             this.buttonShowFreeClassrooms.TabIndex = 25;
@@ -162,7 +162,7 @@
             this.buttonShowCSchedule.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.buttonShowCSchedule.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonShowCSchedule.ForeColor = System.Drawing.Color.White;
-            this.buttonShowCSchedule.Location = new System.Drawing.Point(607, 70);
+            this.buttonShowCSchedule.Location = new System.Drawing.Point(589, 70);
             this.buttonShowCSchedule.Name = "buttonShowCSchedule";
             this.buttonShowCSchedule.Size = new System.Drawing.Size(140, 37);
             this.buttonShowCSchedule.TabIndex = 24;
@@ -186,9 +186,9 @@
             // listBoxSchedule
             // 
             this.listBoxSchedule.FormattingEnabled = true;
-            this.listBoxSchedule.Location = new System.Drawing.Point(28, 144);
+            this.listBoxSchedule.Location = new System.Drawing.Point(12, 144);
             this.listBoxSchedule.Name = "listBoxSchedule";
-            this.listBoxSchedule.Size = new System.Drawing.Size(488, 394);
+            this.listBoxSchedule.Size = new System.Drawing.Size(554, 394);
             this.listBoxSchedule.TabIndex = 22;
             this.listBoxSchedule.SelectedIndexChanged += new System.EventHandler(this.listBoxSchedule_SelectedIndexChanged);
             // 
@@ -215,7 +215,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Schedule";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Schedule_FormClosing);
-            
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
