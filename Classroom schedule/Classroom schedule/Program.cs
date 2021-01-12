@@ -40,6 +40,9 @@ namespace Classroom_schedule
             services.AddScoped<IClassroomBusiness, ClassroomBusiness>();
             services.AddScoped<Login>();
             services.AddScoped<Form1>();
+           
+            
+
         }
     }
 }
