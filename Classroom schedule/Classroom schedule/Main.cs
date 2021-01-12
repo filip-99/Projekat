@@ -35,8 +35,8 @@ namespace Classroom_schedule
         private void buttonScheduling_Click(object sender, EventArgs e)
         {
             Main m = new Main(schedulingBusiness, periodBusiness, classroomBusiness);
-            
-            m.Show();
+            this.Hide();
+            m.ShowDialog();
             m.BringToFront();
         }
 
@@ -386,12 +386,14 @@ namespace Classroom_schedule
         private void buttonShowSchedule_Click(object sender, EventArgs e)
         {
             Schedule s = new Schedule(schedulingBusiness, periodBusiness, classroomBusiness);
-            
-            s.Show();
+            this.Hide();
+            s.ShowDialog();
             s.BringToFront();
         }
 
-        private void Main_FormClosing(object sender, FormClosingEventArgs e)
+        
+
+        private void Main_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
         }
