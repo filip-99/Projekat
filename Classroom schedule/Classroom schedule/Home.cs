@@ -39,8 +39,8 @@ namespace Classroom_schedule
         private void buttonShowScheduling_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Login m = new Login(schedulingBusiness, periodBusiness, classroomBusiness);
-            m.Show();
+            Schedule s = new Schedule(schedulingBusiness, periodBusiness, classroomBusiness);
+            s.Show();
         }
     }
 }
