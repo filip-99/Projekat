@@ -52,8 +52,9 @@
             this.panel1.Controls.Add(this.buttonShowSchedule);
             this.panel1.Controls.Add(this.buttonScheduling);
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1136, 45);
+            this.panel1.Size = new System.Drawing.Size(1704, 69);
             this.panel1.TabIndex = 2;
             // 
             // buttonShowSchedule
@@ -61,9 +62,10 @@
             this.buttonShowSchedule.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.buttonShowSchedule.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonShowSchedule.ForeColor = System.Drawing.Color.White;
-            this.buttonShowSchedule.Location = new System.Drawing.Point(143, 3);
+            this.buttonShowSchedule.Location = new System.Drawing.Point(214, 5);
+            this.buttonShowSchedule.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.buttonShowSchedule.Name = "buttonShowSchedule";
-            this.buttonShowSchedule.Size = new System.Drawing.Size(134, 38);
+            this.buttonShowSchedule.Size = new System.Drawing.Size(201, 58);
             this.buttonShowSchedule.TabIndex = 1;
             this.buttonShowSchedule.Text = "Show schedule";
             this.buttonShowSchedule.UseVisualStyleBackColor = false;
@@ -74,9 +76,10 @@
             this.buttonScheduling.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.buttonScheduling.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonScheduling.ForeColor = System.Drawing.Color.White;
-            this.buttonScheduling.Location = new System.Drawing.Point(3, 3);
+            this.buttonScheduling.Location = new System.Drawing.Point(4, 5);
+            this.buttonScheduling.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.buttonScheduling.Name = "buttonScheduling";
-            this.buttonScheduling.Size = new System.Drawing.Size(134, 38);
+            this.buttonScheduling.Size = new System.Drawing.Size(201, 58);
             this.buttonScheduling.TabIndex = 0;
             this.buttonScheduling.Text = "Scheduling";
             this.buttonScheduling.UseVisualStyleBackColor = false;
@@ -84,38 +87,44 @@
             // 
             // textBoxFrom
             // 
-            this.textBoxFrom.Location = new System.Drawing.Point(954, 113);
+            this.textBoxFrom.Location = new System.Drawing.Point(1431, 174);
+            this.textBoxFrom.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBoxFrom.Name = "textBoxFrom";
-            this.textBoxFrom.Size = new System.Drawing.Size(61, 20);
+            this.textBoxFrom.Size = new System.Drawing.Size(90, 26);
             this.textBoxFrom.TabIndex = 32;
             // 
             // textBoxTo
             // 
-            this.textBoxTo.Location = new System.Drawing.Point(1033, 113);
+            this.textBoxTo.Location = new System.Drawing.Point(1550, 174);
+            this.textBoxTo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBoxTo.Name = "textBoxTo";
-            this.textBoxTo.Size = new System.Drawing.Size(61, 20);
+            this.textBoxTo.Size = new System.Drawing.Size(90, 26);
             this.textBoxTo.TabIndex = 31;
             // 
             // textBoxFreePeriods
             // 
-            this.textBoxFreePeriods.Location = new System.Drawing.Point(765, 113);
+            this.textBoxFreePeriods.Location = new System.Drawing.Point(1148, 174);
+            this.textBoxFreePeriods.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBoxFreePeriods.Name = "textBoxFreePeriods";
-            this.textBoxFreePeriods.Size = new System.Drawing.Size(140, 20);
+            this.textBoxFreePeriods.Size = new System.Drawing.Size(208, 26);
             this.textBoxFreePeriods.TabIndex = 30;
             // 
             // textBoxCSchedule
             // 
-            this.textBoxCSchedule.Location = new System.Drawing.Point(589, 113);
+            this.textBoxCSchedule.Location = new System.Drawing.Point(884, 174);
+            this.textBoxCSchedule.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBoxCSchedule.Name = "textBoxCSchedule";
-            this.textBoxCSchedule.Size = new System.Drawing.Size(140, 20);
+            this.textBoxCSchedule.Size = new System.Drawing.Size(208, 26);
             this.textBoxCSchedule.TabIndex = 29;
             // 
             // listBoxHelp
             // 
             this.listBoxHelp.FormattingEnabled = true;
-            this.listBoxHelp.Location = new System.Drawing.Point(572, 157);
+            this.listBoxHelp.ItemHeight = 20;
+            this.listBoxHelp.Location = new System.Drawing.Point(858, 222);
+            this.listBoxHelp.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.listBoxHelp.Name = "listBoxHelp";
-            this.listBoxHelp.Size = new System.Drawing.Size(551, 381);
+            this.listBoxHelp.Size = new System.Drawing.Size(824, 604);
             this.listBoxHelp.TabIndex = 28;
             // 
             // buttonFromTo
@@ -123,9 +132,10 @@
             this.buttonFromTo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.buttonFromTo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonFromTo.ForeColor = System.Drawing.Color.White;
-            this.buttonFromTo.Location = new System.Drawing.Point(954, 70);
+            this.buttonFromTo.Location = new System.Drawing.Point(1431, 108);
+            this.buttonFromTo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.buttonFromTo.Name = "buttonFromTo";
-            this.buttonFromTo.Size = new System.Drawing.Size(140, 37);
+            this.buttonFromTo.Size = new System.Drawing.Size(210, 57);
             this.buttonFromTo.TabIndex = 27;
             this.buttonFromTo.Text = "Show periods in range";
             this.buttonFromTo.UseVisualStyleBackColor = false;
@@ -136,9 +146,10 @@
             this.buttonOnlyFree.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.buttonOnlyFree.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonOnlyFree.ForeColor = System.Drawing.Color.White;
-            this.buttonOnlyFree.Location = new System.Drawing.Point(267, 84);
+            this.buttonOnlyFree.Location = new System.Drawing.Point(400, 129);
+            this.buttonOnlyFree.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.buttonOnlyFree.Name = "buttonOnlyFree";
-            this.buttonOnlyFree.Size = new System.Drawing.Size(140, 37);
+            this.buttonOnlyFree.Size = new System.Drawing.Size(210, 57);
             this.buttonOnlyFree.TabIndex = 26;
             this.buttonOnlyFree.Text = "Show only free periods";
             this.buttonOnlyFree.UseVisualStyleBackColor = false;
@@ -149,9 +160,10 @@
             this.buttonShowFreeClassrooms.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.buttonShowFreeClassrooms.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonShowFreeClassrooms.ForeColor = System.Drawing.Color.White;
-            this.buttonShowFreeClassrooms.Location = new System.Drawing.Point(765, 70);
+            this.buttonShowFreeClassrooms.Location = new System.Drawing.Point(1148, 108);
+            this.buttonShowFreeClassrooms.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.buttonShowFreeClassrooms.Name = "buttonShowFreeClassrooms";
-            this.buttonShowFreeClassrooms.Size = new System.Drawing.Size(140, 37);
+            this.buttonShowFreeClassrooms.Size = new System.Drawing.Size(210, 57);
             this.buttonShowFreeClassrooms.TabIndex = 25;
             this.buttonShowFreeClassrooms.Text = "Show free classroom periods";
             this.buttonShowFreeClassrooms.UseVisualStyleBackColor = false;
@@ -162,9 +174,10 @@
             this.buttonShowCSchedule.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.buttonShowCSchedule.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonShowCSchedule.ForeColor = System.Drawing.Color.White;
-            this.buttonShowCSchedule.Location = new System.Drawing.Point(589, 70);
+            this.buttonShowCSchedule.Location = new System.Drawing.Point(884, 108);
+            this.buttonShowCSchedule.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.buttonShowCSchedule.Name = "buttonShowCSchedule";
-            this.buttonShowCSchedule.Size = new System.Drawing.Size(140, 37);
+            this.buttonShowCSchedule.Size = new System.Drawing.Size(210, 57);
             this.buttonShowCSchedule.TabIndex = 24;
             this.buttonShowCSchedule.Text = "Show classroom schedule";
             this.buttonShowCSchedule.UseVisualStyleBackColor = false;
@@ -175,9 +188,10 @@
             this.buttonShowS.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.buttonShowS.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonShowS.ForeColor = System.Drawing.Color.White;
-            this.buttonShowS.Location = new System.Drawing.Point(121, 84);
+            this.buttonShowS.Location = new System.Drawing.Point(182, 129);
+            this.buttonShowS.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.buttonShowS.Name = "buttonShowS";
-            this.buttonShowS.Size = new System.Drawing.Size(140, 37);
+            this.buttonShowS.Size = new System.Drawing.Size(210, 57);
             this.buttonShowS.TabIndex = 23;
             this.buttonShowS.Text = "Show schedule";
             this.buttonShowS.UseVisualStyleBackColor = false;
@@ -186,17 +200,19 @@
             // listBoxSchedule
             // 
             this.listBoxSchedule.FormattingEnabled = true;
-            this.listBoxSchedule.Location = new System.Drawing.Point(12, 144);
+            this.listBoxSchedule.ItemHeight = 20;
+            this.listBoxSchedule.Location = new System.Drawing.Point(18, 222);
+            this.listBoxSchedule.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.listBoxSchedule.Name = "listBoxSchedule";
-            this.listBoxSchedule.Size = new System.Drawing.Size(554, 394);
+            this.listBoxSchedule.Size = new System.Drawing.Size(829, 604);
             this.listBoxSchedule.TabIndex = 22;
             this.listBoxSchedule.SelectedIndexChanged += new System.EventHandler(this.listBoxSchedule_SelectedIndexChanged);
             // 
             // Schedule
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1135, 608);
+            this.ClientSize = new System.Drawing.Size(1702, 935);
             this.Controls.Add(this.textBoxFrom);
             this.Controls.Add(this.textBoxTo);
             this.Controls.Add(this.textBoxFreePeriods);
@@ -210,7 +226,6 @@
             this.Controls.Add(this.listBoxSchedule);
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Schedule";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Schedule";

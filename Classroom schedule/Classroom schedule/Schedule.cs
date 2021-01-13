@@ -34,7 +34,7 @@ namespace Classroom_schedule
                on scheduling.Period_id equals period.Id
                select new { ClassroomCapacity = classroom.Capacity, ClassroomNumber = classroom.Number, SchedulingDay = scheduling.Day, SchedulingPeriod = scheduling.Period_id, SchedulingNumber = classroom.Number, SchedulingOccupied = scheduling.Occupied, SchedulingDuty = scheduling.Duty_person, PeriodStart = period.Start_time, PeriodEnd = period.End_time };
             //Whole schedule[Scheduling + Classrooms]
-            listBoxSchedule.Items.Add("Day\tClassroom number\tPeriod\tOccupied\tCapacity \tStart time \tEnd time\t\tPerson on duty");
+            listBoxSchedule.Items.Add("Day\tClassroom number\tPeriod\tOccupied\tCapacity \t\tStart time \tEnd time\t\tPerson on duty");
             foreach (var i in innerJoin)
             {
                 listBoxSchedule.Items.Add(i.SchedulingDay + "\t" + i.ClassroomNumber + "\t\t" + i.SchedulingPeriod + " \t" + i.SchedulingOccupied + "  \t" + i.ClassroomCapacity + "\t\t" + i.PeriodStart + " \t " + i.PeriodEnd + " \t" + i.SchedulingDuty);
@@ -49,7 +49,7 @@ namespace Classroom_schedule
             join period in periodBusiness.GetAllPeriods()
             on scheduling.Period_id equals period.Id
             select new { ClassroomCapacity = classroom.Capacity, ClassroomNumber = classroom.Number, SchedulingDay = scheduling.Day, SchedulingPeriod = scheduling.Period_id, SchedulingNumber = classroom.Number, SchedulingOccupied = scheduling.Occupied, SchedulingDuty = scheduling.Duty_person, PeriodStart = period.Start_time, PeriodEnd = period.End_time };
-            listBoxSchedule.Items.Add("Day\tClassroom number\tPeriod\tOccupied\tCapacity \tStart time \tEnd time\t\tPerson on duty");
+            listBoxSchedule.Items.Add("Day\tClassroom number\tPeriod\tOccupied\tCapacity \t\tStart time \tEnd time\t\tPerson on duty");
             foreach (var i in innerJoin)
             {
                 if (i.SchedulingOccupied == false)
@@ -73,7 +73,7 @@ namespace Classroom_schedule
             {
                 listBoxHelp.Items.Clear();
                 ClNum = Convert.ToInt32(textBoxCSchedule.Text);
-                listBoxHelp.Items.Add("Day\tClassroom number\tPeriod\tOccupied\tCapacity \tStart time \tEnd time\t\tPerson on duty");
+                listBoxHelp.Items.Add("Day\tClassroom number\tPeriod\tOccupied\tCapacity \t\tStart time \tEnd time\t\tPerson on duty");
                 foreach (var i in innerJoin)
                 {
                     if (i.ClassroomNumber == ClNum)
@@ -104,7 +104,7 @@ namespace Classroom_schedule
                 listBoxHelp.Items.Clear();
 
                 ClNum = Convert.ToInt32(textBoxFreePeriods.Text);
-                listBoxHelp.Items.Add("Day\tClassroom number\tPeriod\tOccupied\tCapacity \tStart time \tEnd time\t\tPerson on duty");
+                listBoxHelp.Items.Add("Day\tClassroom number\tPeriod\tOccupied\tCapacity \t\tStart time \tEnd time\t\tPerson on duty");
                 foreach (var i in innerJoin)
                 {
                     if (i.ClassroomNumber == ClNum && i.SchedulingOccupied == false)
@@ -133,11 +133,12 @@ namespace Classroom_schedule
                on scheduling.Period_id equals period.Id
                select new { ClassroomCapacity = classroom.Capacity, ClassroomNumber = classroom.Number, SchedulingDay = scheduling.Day, SchedulingPeriod = scheduling.Period_id, SchedulingNumber = classroom.Number, SchedulingOccupied = scheduling.Occupied, SchedulingDuty = scheduling.Duty_person, PeriodStart = period.Start_time, PeriodEnd = period.End_time };
                 //All periods[Scheduling + Classrooms]
-                listBoxHelp.Items.Add("Day\tClassroom number\tPeriod\tOccupied\tCapacity \tStart time \tEnd time\t\tPerson on duty");
+                listBoxHelp.Items.Add("Day\tClassroom number\tPeriod\tOccupied\tCapacity\t\tStart time\tEnd time\t\tPerson on duty");
+                listBoxHelp.Items.Add("Day\tClassroom number\tPeriod\tOccupied\tCapacity\t\tStart time\tEnd time\t\tPerson on duty");
                 foreach (var i in innerJoin)
                 {
                     if (i.PeriodStart >= TimeSpan.Parse(textBoxFrom.Text) && i.PeriodEnd <= TimeSpan.Parse(textBoxTo.Text))
-                        listBoxHelp.Items.Add(i.SchedulingDay + "\t" + i.ClassroomNumber + "\t\t" + i.SchedulingPeriod + " \t" + i.SchedulingOccupied + "  \t" + i.ClassroomCapacity + "\t\t" + i.PeriodStart + " \t " + i.PeriodEnd + " \t" + i.SchedulingDuty);
+                        listBoxHelp.Items.Add(i.SchedulingDay + "\t" + i.ClassroomNumber + "\t\t" + i.SchedulingPeriod + " \t" + i.SchedulingOccupied + "  \t" + i.ClassroomCapacity + "\t" + i.PeriodStart + " \t " + i.PeriodEnd + " \t" + i.SchedulingDuty);
                 }
             }
             else
@@ -149,10 +150,10 @@ namespace Classroom_schedule
 
         private void buttonScheduling_Click(object sender, EventArgs e)
         {
-            Main m = new Main(schedulingBusiness, periodBusiness, classroomBusiness);
+            Login2 l = new Login2(schedulingBusiness, periodBusiness, classroomBusiness);
             this.Hide();
-            m.ShowDialog();
-            m.BringToFront();
+            l.ShowDialog();
+            l.BringToFront();
 
         }
 
@@ -213,11 +214,6 @@ namespace Classroom_schedule
         private void Schedule_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
-        }
-
-        
+        }   
     }
-
-    
-    
 }
