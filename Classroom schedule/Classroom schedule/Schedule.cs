@@ -134,11 +134,10 @@ namespace Classroom_schedule
                select new { ClassroomCapacity = classroom.Capacity, ClassroomNumber = classroom.Number, SchedulingDay = scheduling.Day, SchedulingPeriod = scheduling.Period_id, SchedulingNumber = classroom.Number, SchedulingOccupied = scheduling.Occupied, SchedulingDuty = scheduling.Duty_person, PeriodStart = period.Start_time, PeriodEnd = period.End_time };
                 //All periods[Scheduling + Classrooms]
                 listBoxHelp.Items.Add("Day\tClassroom number\tPeriod\tOccupied\tCapacity\t\tStart time\tEnd time\t\tPerson on duty");
-                listBoxHelp.Items.Add("Day\tClassroom number\tPeriod\tOccupied\tCapacity\t\tStart time\tEnd time\t\tPerson on duty");
                 foreach (var i in innerJoin)
                 {
                     if (i.PeriodStart >= TimeSpan.Parse(textBoxFrom.Text) && i.PeriodEnd <= TimeSpan.Parse(textBoxTo.Text))
-                        listBoxHelp.Items.Add(i.SchedulingDay + "\t" + i.ClassroomNumber + "\t\t" + i.SchedulingPeriod + " \t" + i.SchedulingOccupied + "  \t" + i.ClassroomCapacity + "\t" + i.PeriodStart + " \t " + i.PeriodEnd + " \t" + i.SchedulingDuty);
+                        listBoxHelp.Items.Add(i.SchedulingDay + "\t" + i.ClassroomNumber + "\t\t" + i.SchedulingPeriod + " \t" + i.SchedulingOccupied + "  \t" + i.ClassroomCapacity + "\t\t" + i.PeriodStart + " \t " + i.PeriodEnd + " \t" + i.SchedulingDuty);
                 }
             }
             else
