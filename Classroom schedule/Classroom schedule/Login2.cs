@@ -80,7 +80,7 @@ namespace Classroom_schedule
                 {
                     MessageBox.Show("You have successfully logged in!");
                     this.Hide();
-                    Main m = new Main(schedulingBusiness, periodBusiness, classroomBusiness);
+                    FormMain m = new FormMain(schedulingBusiness, periodBusiness, classroomBusiness);
                     m.ShowDialog();
                     return;
                 }

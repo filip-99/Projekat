@@ -1,6 +1,6 @@
 ﻿namespace Classroom_schedule
 {
-    partial class Main
+    partial class FormMain
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             this.panel1 = new System.Windows.Forms.Panel();
             this.buttonShowSchedule = new System.Windows.Forms.Button();
             this.buttonScheduling = new System.Windows.Forms.Button();
