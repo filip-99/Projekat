@@ -13,17 +13,17 @@ using System.Windows.Forms;
 
 namespace Classroom_schedule
 {
-    public partial class Main : Form
+    public partial class FormMain : Form
     {
         private readonly ISchedulingBusiness schedulingBusiness;
         private readonly IPeriodBusiness periodBusiness;
         private readonly IClassroomBusiness classroomBusiness;
 
-        public Main()
+        public FormMain()
         {
         }
 
-        public Main(ISchedulingBusiness schedulingBusiness, IPeriodBusiness periodBusiness, IClassroomBusiness classroomBusiness)
+        public FormMain(ISchedulingBusiness schedulingBusiness, IPeriodBusiness periodBusiness, IClassroomBusiness classroomBusiness)
         {
             InitializeComponent();
             this.schedulingBusiness = schedulingBusiness;
@@ -34,7 +34,7 @@ namespace Classroom_schedule
 
         private void buttonScheduling_Click(object sender, EventArgs e)
         {
-            Main m = new Main(schedulingBusiness, periodBusiness, classroomBusiness);
+            FormMain m = new FormMain(schedulingBusiness, periodBusiness, classroomBusiness);
             this.Hide();
             m.ShowDialog();
             m.BringToFront();
